@@ -22,7 +22,7 @@ Creates a new stack object
 pushes val into stack object
 
 #### `stack.pop()`
-removes top of stack element and return it's value
+removes top of stack element and return its value
 
 ## License
 
