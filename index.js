@@ -49,5 +49,12 @@ Stack.prototype.display = function() {
   }
 }
 
+Stack.prototype.forEach = function (fn) {
+  var val = this.top
+  for (val; val !== null; val = val.next) {
+    fn(val.value)
+  }
+}
+
 module.exports = Stack
 

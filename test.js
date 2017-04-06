@@ -6,7 +6,7 @@ s.push('First')
 s.push('Second')
 
 console.log('After pushing')
-s.display()
+s.forEach(console.log)
 /*
 Second
 First
@@ -20,5 +20,6 @@ console.log()
 
 console.log('After popping')
 s.display()
+
 
 
