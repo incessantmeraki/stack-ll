@@ -1,8 +1,8 @@
 // Abstraction of node
 
 function Stacknode() {
-  this.value = null 
-  this.next = null //stacknode type
+  this.value = null
+  this.next = null
 }
 
 Stacknode.prototype.setVal = function (val) {
@@ -18,42 +18,43 @@ Stacknode.prototype.link = function (node) {
 //Abstraction of Stack
 
 function Stack() {
-  this.top = null //stacknode type
+  this._top = null //stacknode type
+  this.length = 0
 }
 
 Stack.prototype.isEmpty = function () {
-  return this.top === null
+  return this._top === null
 }
 
 Stack.prototype.push = function ( s ) {
   var newNode = new Stacknode()
   newNode.setVal(s)
-  newNode.link(this.top)
-  this.top = newNode
+  newNode.link(this._top)
+  this._top = newNode
+  this.length = this.length + 1
 }
+
 Stack.prototype.pop = function () {
-  if (!this.top) {
+  if (this._top === null) {
     console.log("pop called on empty stack")
     return
   }
-  var oldtop = this.top 
-  this.top = this.top.next  
-  return oldtop.value
-  
+  var old_top = this._top 
+  this._top = this._top.next  
+  this.length = this.length - 1
+  return old_top.value
 }
 
-Stack.prototype.display = function() {
-  var val = this.top
-  for ( val; val !== null; val = val.next) {
-    console.log(val.value)
-  }
-}
 
 Stack.prototype.forEach = function (fn) {
-  var val = this.top
+  var val = this._top
   for (val; val !== null; val = val.next) {
     fn(val.value)
   }
+}
+
+Stack.prototype.clearAll = function () { 
+  this._top = null
 }
 
 module.exports = Stack
