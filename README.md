@@ -8,7 +8,7 @@ simple last-in-first-out(LIFO) data structure
 ### Example
 
 ```js
-  var Stack = require('./index.js')
+  var Stack = require('stack-ll')
   var s = new Stack()
   s.push('hello')
   s.push('world')
