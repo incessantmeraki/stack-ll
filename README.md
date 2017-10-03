@@ -1,5 +1,8 @@
 # stack
 simple last-in-first-out(LIFO) data structure
+
+[![Build Status](https://travis-ci.org/incessantmeraki/stack-ll.svg?branch=master)](https://travis-ci.org/incessantmeraki/stack-ll)
+
 ## Usage
 
 ### Example
