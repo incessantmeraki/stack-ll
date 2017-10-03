@@ -4,7 +4,7 @@
   },
   "name": "stack-ll",
   "description": "simple last-in-first-out(LIFO) data structure",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "dependencies": {},
   "scripts": {
