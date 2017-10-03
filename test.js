@@ -1,25 +1,20 @@
+var tape = require('tape')
 var Stack = require('./index.js')
 
 var s = new Stack()
 
-s.push('First')
-s.push('Second')
+tape('basic operations', function (t) {
+  var s = new Stack()
 
-console.log('After pushing')
-s.forEach(console.log)
-/*
-Second
-First
-*/
-console.log()
+  s.push('First')
+  s.push('Second')
+  t.equal(s.length, 2)
 
-console.log('Let\`s pop')
-var pv = s.pop()
-console.log('Popped value is', pv)
-console.log()
-
-console.log('After popping')
-s.display()
+  t.equal(s.pop(), 'Second')
+  t.equal(s.pop(), 'First')
+  t.equal(s.length, 0)
+  t.end()
+})
 
 
 

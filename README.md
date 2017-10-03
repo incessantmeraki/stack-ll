@@ -24,6 +24,12 @@ pushes val into stack object
 #### `stack.pop()`
 removes top of stack element and return its value
 
+#### `stack.length`
+returns length of the stack 
+
+#### `stack.forEach(callback(val))`
+Iterate over each value of stack using callback 
+
 ## License
 
 MIT
